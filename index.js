@@ -24,7 +24,7 @@ let userAttempts = 1;
 // Fonction récursive si le nombre choisi n'est pas bon :
 const guessAgain = () => {
   // Nombre choisi par le user :
-  const enteredNumber = Number(prompt("\nEnter a number : "));
+  const enteredNumber = Number(prompt("\n> Enter a number : "));
 
   // Si le nombre n'est pas valide, demander à nouveau de choisir entre 0 et 100 :
   if (Number.isNaN(enteredNumber) || enteredNumber > 100 || enteredNumber < 0) {
