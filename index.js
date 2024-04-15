@@ -16,9 +16,9 @@ Let's get started! 🚀
 `);
 
 // Générer un nombre aléatoire :
-const targetNumber = Math.floor(Math.random() * 100);
+let targetNumber = Math.floor(Math.random() * 100);
 
-// Compteur d'essai :
+// Compteur d'essais :
 let userAttempts = 1;
 
 // Fonction récursive si le nombre choisi n'est pas bon :
@@ -55,5 +55,27 @@ const guessAgain = () => {
       } ! 🎉`
     );
   }
+  return askToStartANewPartyOrQuit();
 };
+
+// Fonction pour reset, relancer ou quitter le programme :
+const askToStartANewPartyOrQuit = () => {
+  // Demander à relancer une partie :
+  const answer = prompt("Do you want to play again (yes/no) ? ");
+
+  // Forcer à répondre par "yes" ou "no" :
+  if (answer !== "yes" && answer !== "no") {
+    console.log("Write yes or no !");
+    askToStartANewPartyOrQuit();
+  } else if (answer === "yes") {
+    // Re-générer un nombre aléatoire :
+    targetNumber = Math.floor(Math.random() * 100);
+    // Réinitialiser le compteur :
+    userAttempts = 1;
+    guessAgain();
+  } else {
+    process.exit(1);
+  }
+};
+
 guessAgain();

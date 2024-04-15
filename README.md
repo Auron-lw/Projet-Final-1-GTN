@@ -20,7 +20,7 @@ Il faut compter le nombre d'essais de l'utilisateur et le but est de le faire en
 
 ## Partie 2 :
 
-Rajoute une feature pour pouvoir facilement "relancer" la partie.
+Rajouter une feature pour pouvoir facilement "relancer" la partie.
 
 ## Partie 3 :
 
